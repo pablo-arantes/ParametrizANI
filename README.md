@@ -10,7 +10,7 @@ This is a repository where you can find a Jupyter notebook scripts to set up a p
 
 The main goal of this work is to demonstrate how to harness the power of cloud-computing to parametrize compounds in a cheap and yet feasible fashion.
 
-1. **ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
+**ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
 
 ## Bugs
 - If you encounter any bugs, please report the issue to https://github.com/pablo-arantes/ParametrizANI/issues
