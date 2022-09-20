@@ -1,6 +1,9 @@
 # ParametrizANI
 Dihedral Parametrization in the Cloud with TorchANI
 
+<img width="1584" alt="image" src="https://user-images.githubusercontent.com/35934150/191140934-d11276fc-2d51-48e5-bf65-87aee84e03a4.png">
+
+
 ## Hi there!
 
 This is a repository where you can find a Jupyter notebook scripts to set up a protocol for parametrization of small molecules dihedrals for GAFF and OpenFF force fields using TorchANI, a PyTorch-based program for training/inference of ANI (ANAKIN-ME) deep learning models to obtain potential energy surfaces and other physical properties of molecular systems.  TorchANI is open-source and freely available on GitHub: https://github.com/aiqm/torchani.
