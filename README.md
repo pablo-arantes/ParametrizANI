@@ -16,7 +16,7 @@ The main goal of this work is to demonstrate how to harness the power of cloud-c
 - If you encounter any bugs, please report the issue to https://github.com/pablo-arantes/ParametrizANI/issues
 
 ## Acknowledgments
-- ParametrizANI by **Souvik Sinha** ([@sou_svk](https://twitter.com/sou_svk)) and **Pablo R. Arantes** ([@pablitoarantes (https://twitter.com/pablitoarantes))
+- ParametrizANI by **Souvik Sinha** ([@sou_svk](https://twitter.com/sou_svk)) and **Pablo R. Arantes** ([@pablitoarantes](https://twitter.com/pablitoarantes))
 - We would like to thank the OpenMM team for developing an excellent and open source engine. 
 - We would like to thank the [Roitberg](https://roitberg.chem.ufl.edu/) team for developing the fantastic [TorchANI](https://github.com/aiqm/torchani).
 - We would like to thank the [Xavier Barril](http://www.ub.edu/bl/) team for their protocol on dihedrals parametrization and for the genetic algorithm script.
