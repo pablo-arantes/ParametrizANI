@@ -12,7 +12,7 @@ The main goal of this work is to demonstrate how to harness the power of cloud-c
 
 **ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
 
-**TorchANI_2D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/TorchANI_2D.ipynb) - `Two Dihedral scan with TorchANI and 2D plot of the map.`
+**TorchANI_2D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/TorchANI_2D.ipynb) - `Two Dihedral scan with TorchANI and 3D plot of the map.`
 
 **Psi4+TorchANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/Psi4%2BTorchANI.ipynb) -`Dihedral scan with Psi4 and structural optimization of each conformer with TorchANI.`
 
