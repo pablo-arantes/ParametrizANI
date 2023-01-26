@@ -6,18 +6,23 @@ Dihedral Parametrization in the Cloud with TorchANI
 
 ## Hi there!
 
-This is a repository where you can find a Jupyter notebook scripts to set up a protocol for parametrization of small molecules dihedrals for GAFF and OpenFF force fields using TorchANI, a PyTorch-based program for training/inference of ANI (ANAKIN-ME) deep learning models to obtain potential energy surfaces and other physical properties of molecular systems.  TorchANI is open-source and freely available on GitHub: https://github.com/aiqm/torchani.
+This is a repository where you can find a Jupyter notebook scripts to set up a protocol for parametrization of small molecules dihedrals for GAFF and OpenFF force fields using TorchANI as a reference, a PyTorch-based program for training/inference of ANI (ANAKIN-ME) deep learning models to obtain potential energy surfaces and other physical properties of molecular systems.  TorchANI is open-source and freely available on GitHub: https://github.com/aiqm/torchani.
 
 The main goal of this work is to demonstrate how to harness the power of cloud-computing to parametrize compounds in a cheap and yet feasible fashion.
 
 **ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
 
+**TorchANI_2D** [![Open In Colab](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/TorchANI_2D.ipynb) - `Two Dihedral scan with TorchANI and 2D plot of the map.`
+
+**Psi4+TorchANI** [![Open In Colab](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/Psi4%2BTorchANI.ipynb) -`Dihedral scan with Psi4 and structural optimization of each conformer with TorchANI.`
+
 ## Bugs
 - If you encounter any bugs, please report the issue to https://github.com/pablo-arantes/ParametrizANI/issues
 
 ## Acknowledgments
-- ParametrizANI by **Souvik Sinha** ([@sou_svk](https://twitter.com/sou_svk)) and **Pablo R. Arantes** ([@pablitoarantes](https://twitter.com/pablitoarantes))
-- We would like to thank the OpenMM team for developing an excellent and open source engine. 
+- ParametrizANI by **Pablo R. Arantes** ([@pablitoarantes](https://twitter.com/pablitoarantes))
+- We would like to thank the OpenMM team for developing an excellent and open source engine.
+- We would like to thank the [Psi4](https://psicode.org/) team for developing an excellent and open source suite of ab initio quantum chemistry.
 - We would like to thank the [Roitberg](https://roitberg.chem.ufl.edu/) team for developing the fantastic [TorchANI](https://github.com/aiqm/torchani).
 - We would like to thank the [Xavier Barril](http://www.ub.edu/bl/) team for their protocol on dihedrals parametrization and for the genetic algorithm script.
 - We would like to thank [iwatobipen](https://twitter.com/iwatobipen) for his fantastic [blog](https://iwatobipen.wordpress.com/) on chemoinformatics.
