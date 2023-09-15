@@ -20,7 +20,7 @@ The main goal of this work is to demonstrate how to harness the power of cloud-c
 - If you encounter any bugs, please report the issue to https://github.com/pablo-arantes/ParametrizANI/issues
 
 ## Acknowledgments
-- ParametrizANI by **Pablo R. Arantes** ([@pablitoarantes](https://twitter.com/pablitoarantes))
+- ParametrizANI by **Pablo R. Arantes** ([@pablitoarantes](https://twitter.com/pablitoarantes)), **Souvik Sinha** and **Giulia Palermo**
 - We would like to thank the OpenMM team for developing an excellent and open source engine.
 - We would like to thank the [Psi4](https://psicode.org/) team for developing an excellent and open source suite of ab initio quantum chemistry.
 - We would like to thank the [Roitberg](https://roitberg.chem.ufl.edu/) team for developing the fantastic [TorchANI](https://github.com/aiqm/torchani).
