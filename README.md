@@ -20,6 +20,11 @@ Welcome to ParametrizANI, an innovative and free tool designed to address the gr
 
 **• Broad Applicability:** ParametrizANI is not only suited for advanced molecular dynamics research and computational drug discovery but also serves as an excellent tool for educational purposes. It allows students to independently run the entire parametrization process without local software compilation or extensive coding experience, with embedded visualization at each step.
 
+**DISCLAIMER:**
+Please note that this repository will no longer be actively updated at this location. All future development, updates, and maintenance for ParametrizANI will be carried out and available at the following repository: [**ParametrizANI**](https://github.com/pablo-arantes/ParametrizANI)
+
+We encourage all users to navigate to the new repository for the latest versions and continued support.
+
 
 **ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
 
