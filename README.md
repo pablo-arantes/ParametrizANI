@@ -6,6 +6,11 @@
 
 Welcome to ParametrizANI, an innovative and free tool designed to address the growing demand for accurate parametrization of small molecules in molecular studies. Our goal is to democratize research by providing a research-friendly environment that is free from resource constraints, enabling teams of all sizes to perform dihedral parametrization with DFT-level accuracy.
 
+**DISCLAIMER:**
+Please note that this repository will no longer be actively updated at this location. All future development, updates, and maintenance for ParametrizANI will be carried out and available at the following repository: [**ParametrizANI**](https://github.com/pablo-arantes/ParametrizANI)
+
+We encourage all users to navigate to the new repository for the latest versions and continued support.
+
 ## Notebooks:
 
 **ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
@@ -27,11 +32,6 @@ Welcome to ParametrizANI, an innovative and free tool designed to address the gr
 **• Versatile and Customizable:** The notebooks are designed for ease of use, following the Jupyter Notebook structure, with an initial configuration step taking less than 5 minutes. Users can select between GAFF and OpenFF force fields, choose charge calculation methods (AM1-BCC or RESP), and even upload their own reference energy profiles calculated using external software (e.g., Gaussian, GAMESS). This flexibility allows for customization to specific research requirements and professional use.
 
 **• Broad Applicability:** ParametrizANI is not only suited for advanced molecular dynamics research and computational drug discovery but also serves as an excellent tool for educational purposes. It allows students to independently run the entire parametrization process without local software compilation or extensive coding experience, with embedded visualization at each step.
-
-**DISCLAIMER:**
-Please note that this repository will no longer be actively updated at this location. All future development, updates, and maintenance for ParametrizANI will be carried out and available at the following repository: [**ParametrizANI**](https://github.com/pablo-arantes/ParametrizANI)
-
-We encourage all users to navigate to the new repository for the latest versions and continued support.
 
 ## Bugs
 - If you encounter any bugs, please report the issue to https://github.com/pablo-arantes/ParametrizANI/issues
