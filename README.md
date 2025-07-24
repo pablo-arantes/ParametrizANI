@@ -1,14 +1,25 @@
-# ParametrizANI
-Dihedral Parametrization in the Cloud with TorchANI
+# ParametrizANI: Fast, Accurate and Free Parametrization for Small Molecules
 
-<img width="1584" alt="image" src="https://user-images.githubusercontent.com/35934150/191140934-d11276fc-2d51-48e5-bf65-87aee84e03a4.png">
-
+![alt text](https://github.com/pablo-arantes/ParametrizANI/blob/main/TOC_graphic.png)
 
 ## Hi there!
 
-This is a repository where you can find a Jupyter notebook scripts to set up a protocol for parametrization of small molecules dihedrals for GAFF and OpenFF force fields using TorchANI as a reference, a PyTorch-based program for training/inference of ANI (ANAKIN-ME) deep learning models to obtain potential energy surfaces and other physical properties of molecular systems.  TorchANI is open-source and freely available on GitHub: https://github.com/aiqm/torchani.
+Welcome to ParametrizANI, an innovative and free tool designed to address the growing demand for accurate parametrization of small molecules in molecular studies. Our goal is to democratize research by providing a research-friendly environment that is free from resource constraints, enabling teams of all sizes to perform dihedral parametrization with DFT-level accuracy.
 
-The main goal of this work is to demonstrate how to harness the power of cloud-computing to parametrize compounds in a cheap and yet feasible fashion.
+**Key Features and Benefits:**
+
+**• Robust Backbone:** ParametrizANI leverages TorchANI, a robust PyTorch-based deep learning program, as its benchmark to ensure precision in parametrization tasks. TorchANI is crucial for training and inference of ANI (ANAKIN-ME) deep learning models, which are fundamental for predicting potential energy surfaces and other molecular system attributes.
+
+**• Accuracy and Efficiency:** ParametrizANI establishes detailed protocols for dihedral parametrization using both GAFF and OpenFF force fields. By integrating TorchANI's predictive power, ParametrizANI offers a streamlined and accurate approach to parametrization, especially for small molecules. TorchANI's neural network models predict molecular energies and properties with high accuracy and efficiency, significantly reducing computation time compared to traditional Quantum Mechanical (QM) methods.
+
+**• Cloud-Based Accessibility:** The tool harnesses the power of Google Colaboratory (Colab), a hosted Jupyter Notebook service that provides free access to computing resources. This makes ParametrizANI a feasible, cost-effective, and accessible approach to compound parametrization, particularly beneficial for investigators worldwide, including those with limited resources. Our notebooks are designed to run efficiently on CPU cores, requiring no heavy parallel processing.
+
+**• Comprehensive Workflow:** ParametrizANI provides comprehensive workflows implemented in Google Colab notebooks, exemplifying a complete pipeline for dihedral parametrization from SMILES strings generation to force field parameter optimization. These workflows enable researchers to efficiently perform accurate and reliable dihedral parametrization.
+
+**• Versatile and Customizable:** The notebooks are designed for ease of use, following the Jupyter Notebook structure, with an initial configuration step taking less than 5 minutes. Users can select between GAFF and OpenFF force fields, choose charge calculation methods (AM1-BCC or RESP), and even upload their own reference energy profiles calculated using external software (e.g., Gaussian, GAMESS). This flexibility allows for customization to specific research requirements and professional use.
+
+**• Broad Applicability:** ParametrizANI is not only suited for advanced molecular dynamics research and computational drug discovery but also serves as an excellent tool for educational purposes. It allows students to independently run the entire parametrization process without local software compilation or extensive coding experience, with embedded visualization at each step.
+
 
 **ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
 
