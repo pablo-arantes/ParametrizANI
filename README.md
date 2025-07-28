@@ -13,11 +13,13 @@ We encourage all users to navigate to the new repository for the latest versions
 
 ## Notebooks:
 
-**ParametrizANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI.ipynb)  - `Dihedral Parametrization with TorchANI as a reference and download the topology in AMBER, GROMACS and OpenMM format.`
+**Notebook A** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_GAFF2.ipynb)  - `Dihedral parametrization of small molecules for GAFF force field using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
 
-**TorchANI_2D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/TorchANI_2D.ipynb) - `Two Dihedral scan with TorchANI and 3D plot of the map.`
+**Notebook B** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_OpenFF.ipynb) - `Dihedral parametrization of small molecules for OpenFF force fields using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
 
-**Psi4+TorchANI** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/Psi4%2BTorchANI.ipynb) -`Dihedral scan with Psi4 and structural optimization of each conformer with TorchANI.`
+**Notebook C** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_TorchANI%2BPsi4.ipynb) -`Dihedral parametrization of small molecules using a reference potential computed with Psi4, combined with structural optimization from TorchANI.`
+
+**Notebook D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_RotProf.ipynb) -`Rotational Profile – fits an empirical energy profile to a reference profile, which can be obtained experimentally, through quantum mechanical (QM) calculations, or using machine learning models such as TorchANI.`
 
 ## Key Features and Benefits:
 
