@@ -6,9 +6,6 @@
 
 Welcome to ParametrizANI, an innovative and free tool designed to address the growing demand for accurate parametrization of small molecules in molecular studies. Our goal is to democratize research by providing a research-friendly environment that is free from resource constraints, enabling teams of all sizes to perform dihedral parametrization with DFT-level accuracy.
 
-**DISCLAIMER:**
-Please note that this repository will no longer be actively updated at this location. All future development, updates, and maintenance for ParametrizANI will be carried out and available at the following repository: [**ParametrizANI**](https://github.com/pablo-arantes/ParametrizANI)
-
 We encourage all users to navigate to the new repository for the latest versions and continued support.
 
 ## Notebooks:
