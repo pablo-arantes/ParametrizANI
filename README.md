@@ -1,4 +1,4 @@
-# ParametrizANI: Fast, Accurate and Free Parametrization for Small Molecules
+# ParametrizANI: Fast and Accessible Dihedral Parametrization for Small Molecules
 
 ![alt text](https://github.com/pablo-arantes/ParametrizANI/blob/main/TOC_graphic.png)
 
