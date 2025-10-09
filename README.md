@@ -44,6 +44,9 @@ Welcome to ParametrizANI, an innovative and free tool designed to address the gr
 - Finally, we would like to thank [Making it rain](https://github.com/pablo-arantes/making-it-rain) team, **Pablo R. Arantes** ([@pablitoarantes](https://twitter.com/pablitoarantes)), **Marcelo D. Polêto** ([@mdpoleto](https://twitter.com/mdpoleto)), **Conrado Pedebos** ([@ConradoPedebos](https://twitter.com/ConradoPedebos)) and **Rodrigo Ligabue-Braun** ([@ligabue_braun](https://twitter.com/ligabue_braun)), for their amazing work.
 
 ## How should I reference this work?
+- For **ParametrizANI**, please cite: <br />
+  Arantes et al. "ParametrizANI: Fast and Accessible Dihedral Parametrization for Small Molecules." <br />
+  Journal of Chemical Information and Modeling (2025) doi: [10.1021/acs.jcim.5c01957](http://pubs.acs.org/doi/abs/10.1021/acs.jcim.5c01957)
 - For **TorchANI**, please cite: <br />
   Gao et al. "TorchANI: A Free and Open Source PyTorch-Based Deep Learning Implementation of the ANI Neural Network Potentials." <br />
   Journal of Chemical Information and Modeling (2020) doi: [10.1021/acs.jcim.0c00451](https://doi.org/10.1021/acs.jcim.0c00451)
