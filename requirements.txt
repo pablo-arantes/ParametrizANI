@@ -1,0 +1,20 @@
+# Core dependencies
+numpy>=1.21
+scipy>=1.7
+matplotlib>=3.5
+
+# Molecular handling
+rdkit
+ase>=3.22
+
+# Neural network potentials
+torch>=1.9
+torchani>=2.2
+# mace-torch  # pip install mace-torch
+# xtb-python  # conda install -c conda-forge xtb-python
+
+# Molecular dynamics  
+openmm>=7.7
+openmmforcefields
+openff-toolkit>=0.11
+parmed

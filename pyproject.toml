@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "parametrizani"
+version = "1.0.0"
+description = "Fast and Accessible Dihedral Parametrization for Small Molecules using Neural Network Potentials"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Pablo R. Arantes", email = "pablo.arantes@ucr.edu"},
+    {name = "Souvik Sinha"},
+    {name = "Giulia Palermo"},
+]
+requires-python = ">=3.9"
+keywords = [
+    "molecular dynamics", "force field", "dihedral parametrization",
+    "neural network potential", "TorchANI", "AMBER", "GROMACS", "OpenMM",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Chemistry",
+]
+
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+torchani = ["torch>=1.9", "torchani>=2.2"]
+mace = ["torch>=1.9", "mace-torch", "e3nn>=0.4"]
+md = ["parmed", "openmmforcefields"]
+rdkit = ["rdkit"]
+ase = ["ase>=3.22"]
+full = ["parametrizani[torchani,mace,md,rdkit,ase]"]
+dev = ["pytest>=7.0", "pytest-cov", "black", "flake8"]
+
+[project.urls]
+Homepage = "https://github.com/pablo-arantes/ParametrizANI"
+Repository = "https://github.com/pablo-arantes/ParametrizANI"
+Issues = "https://github.com/pablo-arantes/ParametrizANI/issues"
+
+[tool.setuptools.packages.find]
+include = ["parametrizani*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
