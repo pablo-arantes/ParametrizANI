@@ -51,7 +51,7 @@ from parametrizani import (
 )
 
 # Define dihedral indices (0-based atom indices for the rotatable bond)
-dihedral_indices = [0, 1, 2, 3]
+dihedral_indices = [0, 1, 3, 4]
 
 # 1. Generate a 3D conformer and dihedral scan
 gen = ConformerGenerator('CC(=O)OC', 'smiles', './work')
@@ -83,8 +83,10 @@ opt = optimize_dihedral(
     mm_energies=mm['energies_relative'],
     atom_types=atom_types
 )
+
 print(f"RMSE: {opt['rmse']:.4f} kcal/mol")
-print(f"Atom types: {atom_types}")  # e.g. ['c3', 'c', 'o', 'c3']
+print(f"Atom types: {atom_types}")
+print(f"\nOptimized FRCMOD parameters:\n{opt['frcmod_params']}")
 ```
 
 ## Workflow
