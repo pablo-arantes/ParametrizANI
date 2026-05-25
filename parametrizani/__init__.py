@@ -65,7 +65,7 @@ def calculate_reference_energies(conformer_files, angles=None, method='torchani'
         Four atom indices defining the dihedral to constrain during optimization.
     """
     calc = ReferenceEnergyCalculator(method, work_dir, device)
-    return calc.scan_dihedral(conformer_files, angles, optimize=optimize,
+    return calc.scan_dihedral(conformer_files, angles, optimize=optimize, fmax=0.001,
                               dihedral_indices=dihedral_indices)
 
 
