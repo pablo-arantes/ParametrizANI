@@ -46,27 +46,45 @@ Our goal is to democratize research by providing a research-friendly environment
 
 ```python
 from parametrizani import (
-    ConformerGenerator, TopologyGenerator,
+    ConformerGenerator, TopologyGenerator, EnergyMinimizer,
     calculate_reference_energies, optimize_dihedral, get_dihedral_atom_types,
 )
 
+# Define dihedral indices (0-based atom indices for the rotatable bond)
 dihedral_indices = [0, 1, 2, 3]
 
+# 1. Generate a 3D conformer and dihedral scan
 gen = ConformerGenerator('CC(=O)OC', 'smiles', './work')
 conf = gen.run()
 scan = gen.generate_dihedral_conformers(dihedral_indices, step=30)
 
+# 2. Generate topology & detect atom types automatically from MOL2
 topo = TopologyGenerator('./work', force_field='gaff2')
 amber_files = topo.generate_amber(conf['mol_file'])
 atom_types = get_dihedral_atom_types(amber_files['mol2'], dihedral_indices)
 
+# 3. Calculate reference energies (with constrained geometry optimization)
 ref = calculate_reference_energies(
     scan['conformers'], scan['angles'], method='torchani',
     dihedral_indices=dihedral_indices
 )
 
-opt = optimize_dihedral(ref['angles'], ref['energies_relative'], atom_types=atom_types)
+# 4. MM minimization with dihedral zeroed (isolates torsion contribution)
+minimizer = EnergyMinimizer('gaff2', './work')
+mm = minimizer.minimize_scan(
+    amber_files['prmtop'], amber_files['inpcrd'],
+    scan['pdb_files'], dihedral_indices,
+    angles=scan['angles'], zero_dihedral=True
+)
+
+# 5. Optimize dihedral parameters (fits ref - mm_zeroed)
+opt = optimize_dihedral(
+    ref['angles'], ref['energies_relative'],
+    mm_energies=mm['energies_relative'],
+    atom_types=atom_types
+)
 print(f"RMSE: {opt['rmse']:.4f} kcal/mol")
+print(f"Atom types: {atom_types}")  # e.g. ['c3', 'c', 'o', 'c3']
 ```
 
 ## Workflow
