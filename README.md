@@ -16,15 +16,15 @@ ParametrizANI is a production-ready Python package for dihedral parameter optimi
 
 ## Notebooks
 
-**Notebook A** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_GAFF2.ipynb) - `Dihedral parametrization of small molecules for GAFF force field using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
+**Notebook A** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_GAFF2.ipynb) - `Dihedral parametrization of small molecules for GAFF force field using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
 
-**Notebook B** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_OpenFF.ipynb) - `Dihedral parametrization of small molecules for OpenFF force fields using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
+**Notebook B** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_OpenFF.ipynb) - `Dihedral parametrization of small molecules for OpenFF force fields using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
 
-**Notebook C** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_TorchANI%2BPsi4.ipynb) - `Dihedral parametrization of small molecules using a reference potential computed with Psi4, combined with structural optimization from TorchANI.`
+**Notebook C** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_TorchANI%2BPsi4.ipynb) - `Dihedral parametrization of small molecules using a reference potential computed with Psi4, combined with structural optimization from TorchANI.`
 
-**Notebook D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_RotProf.ipynb) - `Rotational Profile – fits an empirical energy profile to a reference profile, which can be obtained experimentally, through quantum mechanical (QM) calculations, or using machine learning models such as TorchANI.`
+**Notebook D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_RotProf.ipynb) - `Rotational Profile – fits an empirical energy profile to a reference profile, which can be obtained experimentally, through quantum mechanical (QM) calculations, or using machine learning models such as TorchANI.`
 
-**Notebook E** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_RESP_charges.ipynb) - `Perform a geometry optimization with TorchANI, AIMNet2, or GFN2-xTB, then compute RESP charges to generate the GAFF topology parameters.`
+**Notebook E** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_RESP_charges.ipynb) - `Perform a geometry optimization with TorchANI, AIMNet2, or GFN2-xTB, then compute RESP charges to generate the GAFF topology parameters.`
 
 ## Key Features and Benefits
 
@@ -95,7 +95,7 @@ On Colab, everything is handled automatically via condacolab. See the provided n
 
 ```python
 from parametrizani import (
-    ConformerGenerator, TopologyGenerator,
+    ConformerGenerator, TopologyGenerator, EnergyMinimizer,
     calculate_reference_energies, optimize_dihedral, get_dihedral_atom_types,
 )
 
@@ -118,8 +118,20 @@ ref = calculate_reference_energies(
     dihedral_indices=dihedral_indices
 )
 
-# 4. Optimize dihedral parameters
-opt = optimize_dihedral(ref['angles'], ref['energies_relative'], atom_types=atom_types)
+# 4. MM minimization with dihedral zeroed (isolates torsion contribution)
+minimizer = EnergyMinimizer('gaff2', './work')
+mm = minimizer.minimize_scan(
+    amber_files['prmtop'], amber_files['inpcrd'],
+    scan['pdb_files'], dihedral_indices,
+    angles=scan['angles'], zero_dihedral=True
+)
+
+# 5. Optimize dihedral parameters (fits ref - mm_zeroed)
+opt = optimize_dihedral(
+    ref['angles'], ref['energies_relative'],
+    mm_energies=mm['energies_relative'],
+    atom_types=atom_types
+)
 print(f"RMSE: {opt['rmse']:.4f} kcal/mol")
 print(f"Atom types: {atom_types}")  # e.g. ['c3', 'c', 'o', 'c3']
 ```
