@@ -402,11 +402,15 @@ class ReferenceEnergyCalculator:
             opt.run(fmax=fmax, steps=steps)
         
         # Calculate energy with the model directly (for ensemble disagreement)
+        # Build the batch axis with numpy, not a Python list: passing
+        # [ndarray] to torch.tensor() makes torch warn that creating a tensor
+        # from a list of numpy.ndarrays is extremely slow.
         species = torch.tensor(
-            [atoms.get_atomic_numbers()], dtype=torch.long, device=self.device
+            np.asarray(atoms.get_atomic_numbers())[None],
+            dtype=torch.long, device=self.device
         )
         coordinates = torch.tensor(
-            [atoms.get_positions()], dtype=torch.float32,
+            np.asarray(atoms.get_positions(), dtype=np.float32)[None],
             device=self.device, requires_grad=True
         )
         energy = self.model((species, coordinates)).energies

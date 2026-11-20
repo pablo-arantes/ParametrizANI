@@ -35,6 +35,10 @@ dependencies = [
     "numpy>=1.21",
     "scipy>=1.7",
     "matplotlib>=3.5",
+    # ase is imported at module load time by parametrizani.reference_energy,
+    # which __init__ always imports, so it is a hard requirement rather than
+    # an optional extra.
+    "ase>=3.22",
 ]
 
 [project.optional-dependencies]
