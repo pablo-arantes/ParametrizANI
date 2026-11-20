@@ -341,11 +341,11 @@ amber_files = topo.generate_amber(
 
 | Notebook | Description |
 |----------|-------------|
-| [**Notebook A** — GAFF2](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_GAFF2.ipynb) | Dihedral parametrization for GAFF force field |
-| [**Notebook B** — OpenFF](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_OpenFF.ipynb) | Dihedral parametrization for OpenFF force fields |
-| [**Notebook C** — TorchANI+Psi4](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_TorchANI%2BPsi4.ipynb) | Dihedral parametrization with Psi4 reference + TorchANI optimization |
-| [**Notebook D** — RotProf](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_RotProf.ipynb) | Rotational Profile fitting |
-| [**Notebook E** — RESP Charges](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_RESP_charges.ipynb) | Geometry optimization + Psi4 RESP charges → GAFF2 topology (+ optional dihedral parametrization) |
+| [**Notebook A** — GAFF2](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_GAFF2.ipynb) | Dihedral parametrization for GAFF force field |
+| [**Notebook B** — OpenFF](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_OpenFF.ipynb) | Dihedral parametrization for OpenFF force fields |
+| [**Notebook C** — TorchANI+Psi4](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_TorchANI_Psi4.ipynb) | Dihedral parametrization with Psi4 reference + TorchANI optimization |
+| [**Notebook D** — RotProf](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_RotProf.ipynb) | Rotational Profile fitting |
+| [**Notebook E** — RESP Charges](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_RESP_charges.ipynb) | Geometry optimization + Psi4 RESP charges → GAFF2 topology (+ optional dihedral parametrization) |
 
 ## Acknowledgments
 

@@ -17,15 +17,15 @@ ParametrizANI is a production-ready Python package for dihedral parameter optimi
 
 ## Notebooks
 
-**Notebook A** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_GAFF2.ipynb) - `Dihedral parametrization of small molecules for GAFF force field using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
+**Notebook A** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_GAFF2.ipynb) - `Dihedral parametrization of small molecules for GAFF force field using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
 
-**Notebook B** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_OpenFF.ipynb) - `Dihedral parametrization of small molecules for OpenFF force fields using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
+**Notebook B** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_OpenFF.ipynb) - `Dihedral parametrization of small molecules for OpenFF force fields using state-of-the-art reference methods such as TorchANI, AIMNet2, MACE-OFF or GFN2-xTB.`
 
-**Notebook C** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_TorchANI%2BPsi4.ipynb) - `Dihedral parametrization of small molecules using a reference potential computed with Psi4, combined with structural optimization from TorchANI.`
+**Notebook C** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_TorchANI_Psi4.ipynb) - `Dihedral parametrization of small molecules using a reference potential computed with Psi4, combined with structural optimization from TorchANI.`
 
-**Notebook D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_RotProf.ipynb) - `Rotational Profile – fits an empirical energy profile to a reference profile, which can be obtained experimentally, through quantum mechanical (QM) calculations, or using machine learning models such as TorchANI.`
+**Notebook D** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_RotProf.ipynb) - `Rotational Profile – fits an empirical energy profile to a reference profile, which can be obtained experimentally, through quantum mechanical (QM) calculations, or using machine learning models such as TorchANI.`
 
-**Notebook E** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/ParametrizANI_RESP_charges.ipynb) - `Perform a geometry optimization with TorchANI, AIMNet2, or GFN2-xTB, then compute RESP charges to generate the GAFF topology parameters.`
+**Notebook E** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pablo-arantes/ParametrizANI/blob/main/notebooks/ParametrizANI_RESP_charges.ipynb) - `Perform a geometry optimization with TorchANI, AIMNet2, or GFN2-xTB, then compute RESP charges to generate the GAFF topology parameters.`
 
 ## Key Features and Benefits
 
@@ -91,6 +91,14 @@ It is **not required** for the main workflow.
 ### Google Colab
 
 On Colab, everything is handled automatically via condacolab. See the provided notebooks.
+
+The first cell runs `condacolab.install()`, which **restarts the kernel** — that is
+expected. Wait for the restart, then run the remaining cells in order.
+
+> **Note:** the notebooks pin `condacolab==0.1.*` and deliberately let
+> `condacolab.install()` choose the Miniforge build. Hard-coding a Miniforge
+> installer URL breaks the notebook whenever Colab moves to a new Python version,
+> because the conda environment must match Colab's own interpreter.
 
 ## Quick Start
 

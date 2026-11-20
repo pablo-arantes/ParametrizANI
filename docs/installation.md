@@ -73,13 +73,21 @@ pip install -e ".[full]"
 ## Google Colab
 
 On Colab, everything is handled automatically via condacolab. Simply open one of the
-provided notebooks and run the first two installation cells:
+provided notebooks and run the installation cells in order:
 
-1. **Cell 1** installs condacolab + miniforge
-2. **Cell 2** installs all dependencies via mamba/pip
-3. **Cell 3** imports ParametrizANI
+1. **Cell 1** installs `condacolab==0.1.*` and runs `condacolab.install()`.
+   This **restarts the kernel** — that is expected. Wait for the restart before continuing.
+2. **Cell 2** installs all dependencies via mamba/pip.
+3. **Cell 3** imports ParametrizANI.
 
 No local installation required.
+
+!!! warning "Do not pin a Miniforge installer URL"
+    `condacolab.install()` selects the Miniforge build that matches Colab's current
+    Python version. Passing a hard-coded installer URL to
+    `condacolab.install_from_url()` breaks every cell after the restart as soon as
+    Colab upgrades Python, because condacolab checks that the conda environment's
+    Python matches the running kernel.
 
 ## Verifying the installation
 
