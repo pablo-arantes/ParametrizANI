@@ -92,13 +92,19 @@ It is **not required** for the main workflow.
 
 On Colab, everything is handled automatically via condacolab. See the provided notebooks.
 
-The first cell runs `condacolab.install()`, which **restarts the kernel** — that is
-expected. Wait for the restart, then run the remaining cells in order.
+The first cell runs `condacolab.install(python_version="3.12")`, which **restarts the
+kernel** — that is expected. Wait for the restart, then run the remaining cells in order.
 
-> **Note:** the notebooks pin `condacolab==0.1.*` and deliberately let
-> `condacolab.install()` choose the Miniforge build. Hard-coding a Miniforge
-> installer URL breaks the notebook whenever Colab moves to a new Python version,
-> because the conda environment must match Colab's own interpreter.
+> **Note:** the notebooks use **condacolab 0.2**, which builds the environment with
+> [Pixi](https://pixi.sh) instead of Miniforge. Two consequences:
+>
+> - There is **no `conda` or `mamba`** on the runtime. Add conda-forge packages with
+>   `!pixi add <package>` (the notebooks wrap this in a `pixi_add()` helper).
+> - The Python version is chosen explicitly, so the environment no longer has to match
+>   whatever Python Colab happens to ship.
+>
+> Run any `pip install` **after** all `pixi add` calls — `pixi add` re-solves the
+> environment and would otherwise discard pip-installed packages.
 
 ## Quick Start
 
